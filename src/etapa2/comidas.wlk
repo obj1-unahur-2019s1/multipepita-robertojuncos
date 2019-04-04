@@ -55,6 +55,43 @@ object mijo {
 	
 }
 
+object canelones{
+	method tieneSalsa()
+	{
+	return true
+	}
+	
+	method tieneQueso()
+	{
+		return true 
+		
+	}
+	
+	method energiaPorGramo()
+	{
+		if ((self.tieneSalsa()) && (self.tieneQueso()))
+		{
+			return 32
+		}
+		else if(self.tieneQueso())
+		{
+			return 27
+		}
+		else if(self.tieneSalsa())
+		{
+			return 25
+		}
+		else
+		{
+			return 20
+		} 
+	}
+	
+}
+
+
+
+
 
 /*
  * el alcaucil da 20 joules por gramo
