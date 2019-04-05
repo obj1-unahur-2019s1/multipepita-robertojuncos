@@ -56,36 +56,63 @@ object mijo {
 }
 
 object canelones{
-	method tieneSalsa()
-	{
-	return true
+	var tieneSalsa = false
+	var tieneQueso = false
+	
+	method ponerSalsa()
+	{	
+	tieneSalsa = true
 	}
 	
-	method tieneQueso()
+	method ponerQueso()
 	{
-		return true 
+		tieneQueso = true
+		
+	}
+	method sacarSalsa()
+	{	
+	tieneSalsa = false
+	}
+	
+	method sacarQueso()
+	{
+		tieneQueso = false
 		
 	}
 	
 	method energiaPorGramo()
 	{
-		if ((self.tieneSalsa()) && (self.tieneQueso()))
-		{
-			return 32
-		}
-		else if(self.tieneQueso())
-		{
-			return 27
-		}
-		else if(self.tieneSalsa())
-		{
-			return 25
-		}
-		else
-		{
-			return 20
-		} 
+
+// Primer manera de resolver el ejercicio
+//		if ((tieneSalsa && (tieneQueso)))
+//		{
+//			return 32
+//		}
+//		else if(tieneQueso)
+//		{
+//			return 27
+//		}
+//		else if(tieneSalsa)
+//		{
+//			return 25
+//		}
+//		else
+//		{
+//			return 20
+//		} 
+	
+	// Segunda manera de resolver el ejercicio (mejor porque las conbinaciones son menores si se agregan variables)
+	var valor = 20
+	
+	if (tieneSalsa){ valor = valor + 5}
+	if (tieneQueso){ valor = valor + 7}
+	
+	
+	return valor
 	}
+	
+	
+	
 	
 }
 

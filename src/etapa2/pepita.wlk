@@ -10,10 +10,18 @@ object pepita {
 	
 	// metodos nuevos
 	method estaDebil() { 
-		return (energia>50)
+		return (energia<50)
 		 } 
 	
+	method salirAComer()
+	{
+		self.volar(5)
+		self.comer(alpiste,80)
+		self.volar(5)
 		
+		
+		
+	}
 		
 		
 	method estaFeliz() { 
@@ -29,15 +37,11 @@ object pepita {
 		return cuanto
 	}
 	method haceLoQueQuieras() { 
-		if (self.estaDebil()) {
-			// completar
-		} 
-		// completar el método, de acuerdo a la estructura
-		// que se deja comentada aca abajo
-//		else if (... otra condicion ...) {
-//			
-//		} else {
-//			
-//		}
+		if (self.estaDebil()) {	self.comer(alpiste,20)}
+		if (self.estaFeliz()){self.volar(8)}
+		
+		
+		 
+		
 	}
 }
